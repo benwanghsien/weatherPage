@@ -1,0 +1,377 @@
+.homepage {
+  background-color: #3c8fd1;
+  color: white;
+  form {
+    display: flex;
+    width: 90%;
+    margin: 1rem auto 0;
+    select {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      text-align-last: center;
+      padding: 0.5rem 0;
+      font-size: 1.25rem;
+      option {
+        background-color: #1a68b193;
+        color: white;
+      }
+    }
+  }
+}
+
+.homepage-container {
+  padding: 1rem 0 1px;
+}
+
+.today,
+.tomorrow,
+.params,
+.air,
+.week {
+  width: 95%;
+  background-color: #1a67b1;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+}
+
+.today,
+.tomorrow {
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  border-right: 1px white solid;
+  padding: 1rem;
+}
+
+.right {
+  width: 50%;
+  padding: 1rem;
+}
+
+.time {
+  text-align: center;
+  margin-top: 2.5rem;
+  p {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.weatherCard {
+  text-align: center;
+  span {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.temp {
+  display: flex;
+  justify-content: center;
+}
+
+.maxTemp {
+  &::before {
+    padding: 0 1rem;
+    content: "-";
+  }
+}
+
+.umbrella {
+  position: relative;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+}
+
+.params {
+  padding: 1rem;
+  font-size: 1.25rem;
+  div {
+    display: flex;
+    margin: 0.5rem 0;
+    p:first-child {
+      margin-right: auto;
+    }
+    p:last-child {
+      width: 40%;
+      text-align: center;
+      margin-left: auto;
+    }
+  }
+}
+
+.air {
+  padding: 1rem;
+  svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.75rem;
+  }
+}
+
+.air-index {
+  display: flex;
+  padding: 1.5rem 0 1rem;
+}
+
+.green {
+  color: rgb(0, 255, 0);
+}
+.yellow {
+  color: rgb(255, 255, 0);
+}
+.orange {
+  color: orange;
+}
+.red {
+  color: red;
+}
+.purple {
+  color: violet;
+}
+
+.bar {
+  width: 100%;
+  border: 1px white solid;
+  div {
+    position: relative;
+    height: 100%;
+    transition: all 2s ease-in-out;
+    p:first-child {
+      position: absolute;
+      bottom: 100%;
+      opacity: 0;
+    }
+    p:last-child {
+      position: absolute;
+      bottom: 100%;
+      right: 0%;
+    }
+  }
+}
+
+.index {
+  position: absolute;
+  bottom: 100%;
+  right: 0%;
+}
+
+.airGreen {
+  animation: airGreen 2s ease-in-out forwards;
+  @keyframes airGreen {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: calc(100% / 10 * 1.7);
+      background-color: #00e800;
+    }
+  }
+}
+
+.airYellow {
+  animation: airYellow 2s ease-in-out forwards;
+  @keyframes airYellow {
+    0% {
+      width: 0;
+    }
+    5% {
+      background-color: #00e800;
+    }
+    100% {
+      width: calc(100% / 10 * 3.4);
+      background-color: #ffeb3b;
+    }
+  }
+}
+.airOrange {
+  animation: airOrange 2s ease-in-out forwards;
+  @keyframes airOrange {
+    0% {
+      width: 0;
+    }
+    20% {
+      background-color: #00e800;
+    }
+    50% {
+      background-color: #ffeb3b;
+    }
+    100% {
+      background-color: #f39800;
+      width: calc(100% / 10 * 5.1);
+    }
+  }
+}
+.airRed {
+  animation: airRed 2s ease-in-out forwards;
+  @keyframes airRed {
+    0% {
+      width: 0;
+    }
+    15% {
+      background-color: #00e800;
+    }
+    40% {
+      background-color: #ffeb3b;
+    }
+    60% {
+      background-color: #f39800;
+    }
+    100% {
+      width: calc(100% / 10 * 6.8);
+      background-color: #ea1904;
+    }
+  }
+}
+.airPurple {
+  animation: airPurple 2s ease-in-out forwards;
+  @keyframes airPurple {
+    0% {
+      width: 0;
+    }
+    15% {
+      background-color: #00e800;
+    }
+    30% {
+      background-color: #ffeb3b;
+    }
+    45% {
+      background-color: #f39800;
+    }
+    75% {
+      background-color: #ea1904;
+    }
+    100% {
+      width: calc(100% / 10 * 8.5);
+      background-color: #b34fa2;
+    }
+  }
+}
+.airBrown {
+  animation: airBrown 1.5s ease-in-out forwards;
+  @keyframes airBrown {
+    0% {
+      width: 0;
+    }
+    17% {
+      background-color: #00e800;
+    }
+    34% {
+      background-color: #ffeb3b;
+    }
+    51% {
+      background-color: #f39800;
+    }
+    68% {
+      background-color: #ea1904;
+    }
+    75% {
+      background-color: #b34fa2;
+    }
+    100% {
+      width: calc(100% / 10 * 10);
+      background-color: #492042;
+    }
+  }
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  font-size: 1.25rem;
+  div {
+    display: flex;
+  }
+  & > div {
+    margin: 0 0 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      margin-right: auto;
+    }
+  }
+}
+
+.map {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .homepage-container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .today,
+  .tomorrow,
+  .weatherParams,
+  .week {
+    width: 45%;
+    margin: 0 0 1rem;
+  }
+
+  .params,
+  .air {
+    width: 100%;
+  }
+  .air {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .homepage-container {
+    max-width: 992px;
+    display: flex;
+  }
+
+  .dashboard {
+    width: 55%;
+  }
+
+  .weatherParams {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .map {
+    display: flex;
+    width: 45%;
+    padding-right: 1.5rem;
+    position: relative;
+    top: -10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homepage-container {
+    max-width: 1200px;
+  }
+
+  .left,
+  .params,
+  .air {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .weatherCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}

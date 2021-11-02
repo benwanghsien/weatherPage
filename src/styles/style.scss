@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+// nav bar
+.navbar {
+  background-color: #187ac8;
+}
+.nav-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0 0;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  ul {
+    display: flex;
+    display: none;
+    width: 100%;
+    list-style-type: none;
+    border-top: 1px rgba(255, 255, 255, 0.4) solid;
+    li {
+      width: 50%;
+      display: flex;
+      a {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        transition: all 0.25s;
+        &:hover {
+          color: #f78c00;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn {
+  margin: 0.75rem 1rem 0 auto;
+}
+
+.hamburger {
+  background-color: white;
+  width: 32px;
+  height: 2px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  &::before {
+    content: "";
+    background-color: white;
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+  }
+  &::after {
+    content: "";
+    background-color: white;
+    width: 32px;
+    height: 2px;
+    position: absolute;
+    top: 20px;
+  }
+}
+
+.toggled {
+  transform: rotate(-45deg);
+  top: 10px;
+  &::before {
+    opacity: 0;
+  }
+  &::after {
+    transform: rotate(90deg) translate(-20px);
+  }
+}
+
+// footer
+.footer {
+  background-color: #187ac8;
+  padding: 0.75rem 0;
+  p {
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+// map
+.map {
+  .actived {
+    fill: rgba(255, 255, 255, 0.4);
+    path {
+      fill: rgba(255, 255, 255, 0.4);
+    }
+  }
+  path {
+    stroke: #197ac9;
+    stroke-width: 2px;
+    fill: #e6f8fc;
+    transition: all 0.2s linear;
+    &:hover {
+      fill: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .toggle-btn {
+    display: none;
+  }
+
+  .title {
+    margin-top: 1rem;
+  }
+
+  .nav-wrap {
+    padding: 0;
+    ul {
+      display: flex;
+      width: 30%;
+      border-top: none;
+      margin: 0 1rem 0 auto;
+      li {
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-wrap {
+    max-width: 768px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-wrap {
+    max-width: 992px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-wrap {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@import "./homepage";
+@import "./about";
+@import "./twicon.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");

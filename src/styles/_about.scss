@@ -1,0 +1,51 @@
+.about {
+  min-height: 100vh;
+  background-color: #3c8fd1;
+  color: white;
+  padding: 2rem 0;
+  h2 {
+    border-bottom: 1px solid white;
+    margin: 0.5rem 0;
+  }
+  br {
+    margin: 0 0 0.2rem;
+  }
+  a {
+    color: rgb(255, 164, 79);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: rgb(255, 123, 0);
+    }
+  }
+  ul {
+    padding-left: 1rem;
+  }
+}
+
+.myPhoto {
+  max-width: 200px;
+  margin: 0 auto 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.introduction {
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .about {
+    display: flex;
+    // align-items: center;
+  }
+  .myPhoto {
+    margin: 5rem 2rem 0 auto;
+  }
+  .introduction {
+    width: 40%;
+    margin: 5rem auto 0 0;
+  }
+}
