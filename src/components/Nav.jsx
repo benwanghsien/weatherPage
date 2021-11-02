@@ -6,7 +6,7 @@ const Nav = () => {
     <div className="navbar">
       <div className="nav-wrap">
         <h1 className="title">
-          <Link to="/">
+          <Link to="/weatherPage">
             <i className="twicon-main-island"></i>台灣天氣資訊網
           </Link>
         </h1>
