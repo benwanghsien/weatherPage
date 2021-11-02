@@ -15,10 +15,10 @@ const Nav = () => {
         </div>
         <ul>
           <li>
-            <Link to="/">天氣預報</Link>
+            <Link to="/weatherPage">天氣預報</Link>
           </li>
           <li>
-            <Link to="/about">關於作者</Link>
+            <Link to="/weatherPage/about">關於作者</Link>
           </li>
         </ul>
       </div>

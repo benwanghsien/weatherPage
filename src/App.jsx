@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Nav />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/weatherPage" exact>
           <Home />
         </Route>
-        <Route path="/about" exact>
+        <Route path="/weatherPage/about" exact>
           <About />
         </Route>
       </Switch>
