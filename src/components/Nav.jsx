@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
+  let [toggled, setToggled] = useState(true);
+
+  const handleToggledBtn = (e) => {
+    setToggled((prev) => !prev);
+  };
+
   return (
     <div className="navbar">
       <div className="nav-wrap">
@@ -10,10 +16,10 @@ const Nav = () => {
             <i className="twicon-main-island"></i>台灣天氣資訊網
           </Link>
         </h1>
-        <div className="toggle-btn">
-          <div className="hamburger"></div>
+        <div className="toggle-btn" onClick={handleToggledBtn}>
+          <div className={`hamburger ${toggled ? "isX" : ""}`}></div>
         </div>
-        <ul>
+        <ul className={`${toggled ? "toggled" : ""}`}>
           <li>
             <Link to="/weatherPage">天氣預報</Link>
           </li>

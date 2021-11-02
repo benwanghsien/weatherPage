@@ -26,14 +26,30 @@
   color: white;
 }
 
+.nav-wrap .toggled {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  height: 57px;
+  border-top: 1px rgba(255, 255, 255, 0.4) solid;
+}
+
+.nav-wrap .toggled a {
+  display: block;
+}
+
 .nav-wrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   width: 100%;
+  height: 1px;
   list-style-type: none;
-  border-top: 1px rgba(255, 255, 255, 0.4) solid;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
 }
 
 .nav-wrap ul li {
@@ -69,8 +85,6 @@
   width: 32px;
   height: 2px;
   position: relative;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .hamburger::before {
@@ -91,17 +105,19 @@
   top: 20px;
 }
 
-.toggled {
+.isX {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 10px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-.toggled::before {
+.isX::before {
   opacity: 0;
 }
 
-.toggled::after {
+.isX::after {
   -webkit-transform: rotate(90deg) translate(-20px);
           transform: rotate(90deg) translate(-20px);
 }

@@ -84,8 +84,6 @@ function getWeatherValue(data) {
           hum.elementValue *= 100;
         }
 
-        console.log(hum);
-
         // rounding temp, rain value, percentage hun value, floor uvi value
         // if cannot get data(value = -99), return 0
         function roundValue(num, position = 0) {
