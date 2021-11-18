@@ -68,6 +68,15 @@
   }
 }
 
+.wxicon {
+  display: flex;
+  img {
+    height: 90px;
+    width: 90px;
+    margin: auto;
+  }
+}
+
 .temp {
   display: flex;
   justify-content: center;

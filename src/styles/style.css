@@ -163,13 +163,17 @@
   .nav-wrap {
     padding: 0;
   }
+  .nav-wrap .toggled {
+    border: none;
+  }
   .nav-wrap ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 30%;
+    height: 100%;
     border-top: none;
-    margin: 0 1rem 0 auto;
+    margin: auto 1rem auto auto;
   }
   .nav-wrap ul li {
     width: 100%;
@@ -277,6 +281,18 @@
 
 .weatherCard span {
   margin-bottom: 0.5rem;
+}
+
+.wxicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wxicon img {
+  height: 90px;
+  width: 90px;
+  margin: auto;
 }
 
 .temp {

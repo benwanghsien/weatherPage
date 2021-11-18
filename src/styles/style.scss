@@ -136,11 +136,15 @@
 
   .nav-wrap {
     padding: 0;
+    .toggled {
+      border: none;
+    }
     ul {
       display: flex;
       width: 30%;
+      height: 100%;
       border-top: none;
-      margin: 0 1rem 0 auto;
+      margin: auto 1rem auto auto;
       li {
         width: 100%;
         align-items: center;

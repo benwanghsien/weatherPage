@@ -163,13 +163,13 @@ const DashBoard = (prop) => {
         </div>
         <div className="weatherCard right">
           <p className="timepart">{time.timeRange.timeDesc[0]}</p>
-          <span className="wxicon">
+          <div className="wxicon">
             <img
-              src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/02.svg"
-              alt="晴時多雲"
-              title="晴時多雲"
+              src={`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${time.timeRange.sunRise}/${weekParams.forecast[0].wx[1]}.svg`}
+              alt={`${weekParams.forecast[0].wx[0]}`}
+              title={`${weekParams.forecast[0].wx[0]}`}
             />
-          </span>
+          </div>
           <span className="temp">
             <p className="minTemp">{`${weekParams.forecast[0].minT}°`}</p>
             <p className="maxTemp">{`${weekParams.forecast[0].maxT}°`}</p>
@@ -183,13 +183,13 @@ const DashBoard = (prop) => {
       <div className="tomorrow">
         <div className="weatherCard left">
           <p className="timepart">{time.timeRange.timeDesc[1]}</p>
-          <span className="wxicon">
+          <div className="wxicon">
             <img
-              src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/02.svg"
-              alt="晴時多雲"
-              title="晴時多雲"
+              src={`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${time.timeRange.sunRise}/${weekParams.forecast[1].wx[1]}.svg`}
+              alt={`${weekParams.forecast[1].wx[0]}`}
+              title={`${weekParams.forecast[1].wx[0]}`}
             />
-          </span>
+          </div>
           <span className="temp">
             <p className="minTemp">{`${weekParams.forecast[1].minT}°`}</p>
             <p className="maxTemp">{`${weekParams.forecast[1].maxT}°`}</p>
@@ -201,13 +201,13 @@ const DashBoard = (prop) => {
         </div>
         <div className="weatherCard right">
           <p className="timepart">{time.timeRange.timeDesc[2]}</p>
-          <span className="wxicon">
+          <div className="wxicon">
             <img
-              src="https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/02.svg"
-              alt="晴時多雲"
-              title="晴時多雲"
+              src={`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${time.timeRange.sunRise}/${weekParams.forecast[2].wx[1]}.svg`}
+              alt={`${weekParams.forecast[2].wx[0]}`}
+              title={`${weekParams.forecast[2].wx[0]}`}
             />
-          </span>
+          </div>
           <span className="temp">
             <p className="minTemp">{`${weekParams.forecast[2].minT}°`}</p>
             <p className="maxTemp">{`${weekParams.forecast[2].maxT}°`}</p>
